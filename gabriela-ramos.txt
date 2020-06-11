@@ -1,8 +1,5 @@
-<<<<<<< refs/remotes/origin/master
 1) Empieza Pepito
 2) Empieza Juanita
 3) Termina Juanita
-=======
-1) Empieza Pepito
 4) Termina Pepito
->>>>>>> Termino Pepito
+
