@@ -1,0 +1,46 @@
+[
+  {
+    "IdEntrenador": 1,
+      "nombre" : "Pablo",
+      "cuidad" : "Quito",
+      "distanciaCaminada": 2.5,
+      "nivel" : 32, 
+      "parner": true,
+    "pokemones": [
+     1,2,5,8,24,21,25,34,65,33,75,11,19
+    ]
+  },
+ {
+    "IdEntrenador": 2,
+      "nombre" : "Santiago",
+      "cuidad" : "Ibarra",
+      "distanciaCaminada": 25.5,
+      "nivel" : 26,
+      "parner": false,
+    "pokemones": [
+     1,2,5,8,10,15
+    ]
+  },
+   {
+    "IdEntrenador": 3,
+      "nombre" : "Xavier",
+      "cuidad" : "Quito",
+      "distanciaCaminada": 50.5,
+      "nivel" : 38,
+      "parner": true,
+    "pokemones": [
+     1,2,5,8,10,15,23,26,27
+    ]
+  },
+   {
+    "IdEntrenador": 4,
+      "nombre" : "Nestor",
+      "cuidad" : "Quito",
+      "distanciaCaminada": 25.5,
+      "nivel" : 28,
+      "parner": false,
+    "pokemones": [
+     1,2,5,8,10,15,3,4,6
+    ]
+  }
+  ]
