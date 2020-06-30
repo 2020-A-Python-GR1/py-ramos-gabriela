@@ -5,7 +5,7 @@
       "cuidad" : "Quito",
       "distanciaCaminada": 2.5,
       "nivel" : 32, 
-      "compañero": true,
+      "parner": true,
     "pokemones": [
      1,2,5,8,24,21,25,34,65,33,75,11,19
     ]
@@ -16,7 +16,7 @@
       "cuidad" : "Ibarra",
       "distanciaCaminada": 25.5,
       "nivel" : 26,
-      "compañero": false,
+      "parner": false,
     "pokemones": [
      1,2,5,8,10,15
     ]
@@ -27,7 +27,7 @@
       "cuidad" : "Quito",
       "distanciaCaminada": 50.5,
       "nivel" : 38,
-      "compañero": true,
+      "parner": true,
     "pokemones": [
      1,2,5,8,10,15,23,26,27
     ]
@@ -38,9 +38,9 @@
       "cuidad" : "Quito",
       "distanciaCaminada": 25.5,
       "nivel" : 28,
-      "compañero": false,
+      "parner": false,
     "pokemones": [
      1,2,5,8,10,15,3,4,6
     ]
   }
-  ][[5, "gaby", "quito", 12.45, 32, true, [2, 3, 4]]]
+  ]
