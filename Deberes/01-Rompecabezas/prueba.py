@@ -4,6 +4,3 @@ Created on Thu Jul 16 20:16:39 2020
 
 @author: gabyl
 """
-import pygame
-
-print (pygame.ver)
