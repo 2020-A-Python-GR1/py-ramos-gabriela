@@ -10,24 +10,20 @@ import sys
 import random
 import tkinter as tk
 
-#from tkinter import tkMessageBox
-import tkinter.messagebox
-#import tkMessageBox
-import tkinter
 import tkinter.messagebox
 
 from PIL import Image, ImageTk
 
 
-MAX_BOARD_SIZE = 1000
+MAX_BOARD_SIZE = 500
 
 
 class Application(tk.Frame):
 
-    def __init__(self, image, board_grid=10):
+    def __init__(self, image, board_grid=4):
         tk.Frame.__init__(self)
         self.grid()
-        self.board_grid = board_grid if board_grid > 1 else 2
+        self.board_grid = board_grid if board_grid > 2 else 2
         self.load_image(image)
         self.steps = 0
         self.create_widgets()
@@ -59,15 +55,6 @@ class Application(tk.Frame):
         self.canvas.bind_all('<KeyPress-Right>', self.slide)
 
 
-    def help(self, event):
-        if getattr(self, '_img_help_id', None) is None:
-            self._img_help = ImageTk.PhotoImage(self.image)
-            self._img_help_id = self.canvas.create_image(0, 0,
-                    image=self._img_help, anchor=tk.NW)
-        else:
-            state = self.canvas.itemcget(self._img_help_id, 'state')
-            state = 'hidden' if state == '' else ''
-            self.canvas.itemconfigure(self._img_help_id, state=state)
 
     def slide(self, event):
         pieces = self.get_pieces_around()
@@ -88,6 +75,11 @@ class Application(tk.Frame):
     def _slide(self, from_, to, coord):
         self.canvas.move(from_['id'], *coord)
         to['pos_a'], from_['pos_a'] = from_['pos_a'], to['pos_a']
+        print("movimientos")
+        print( from_['id'])
+        print(to['pos_a'])
+        print(from_['pos_a'])
+        print("movimientos S")
         self.steps += 1
 
     def get_pieces_around(self):
@@ -126,18 +118,28 @@ class Application(tk.Frame):
                 piece = {'id'     : None,
                          'image'  : image,
                          'pos_o'  : (x, y),
+
                          'pos_a'  : None,
                          'visible': True}
+                print("posicion o creada: ")
+                print( piece['pos_o'])
                 self.board.append(piece)
         self.board[-1]['visible'] = False
 
 ## revisamos el estatus de cada pieza del board para saber si esta en la posicion correcta
     def check_status(self):
         for piece in self.board:
+            print("----------")
+            print(piece['id'])
+            print(piece['pos_o'])
+            print(piece['pos_a'])
             if piece['pos_a'] != piece['pos_o']:
+
                 return
         title = 'Ganaste!'
         message = 'Lo resolviste en %d movidas!' % self.steps
+       # print(piece['pos_a'])
+       # print(piece['pos_o'])
         print(message)
         tkinter.messagebox.showinfo(title, message)
 
@@ -154,16 +156,17 @@ class Application(tk.Frame):
                     id = self.canvas.create_image(
                             x1, y1, image=image, anchor=tk.NW)
                     self.board[index]['id'] = id
+                    print(self.board[index]['id'])
                 index += 1
 
 
 if __name__ == '__main__':
     from optparse import OptionParser
     parser = OptionParser(description="Sliding puzzle")
-    parser.add_option('-g', '--board-grid', type=int, default=1,
+    parser.add_option('-g', '--board-grid', type=int, default=3,
                       help="(the minimum value is 3)")
     parser.add_option('-i', '--image', type=str, default='sol.png',
-                      help="path to image")
+                     help="path to image")
     args, _ = parser.parse_args()
 
     if args.board_grid < 2:
