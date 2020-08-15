@@ -163,7 +163,7 @@ class Application(tk.Frame):
 if __name__ == '__main__':
     from optparse import OptionParser
     parser = OptionParser(description="Sliding puzzle")
-    parser.add_option('-g', '--board-grid', type=int, default=3,
+    parser.add_option('-g', '--board-grid', type=int, default=2,
                       help="(the minimum value is 3)")
     parser.add_option('-i', '--image', type=str, default='sol.png',
                      help="path to image")
