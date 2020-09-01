@@ -98,3 +98,4 @@ notas.loc[:, "disciplina"] = 7
 
 promedio=sum(notas.loc["maria"]/3)
 print(promedio)
+
