@@ -10,7 +10,7 @@ Created on Mon Aug 17 21:49:52 2020
 
 import pandas as pd
 
-path_guardado = "C://Users//gabyl//OneDrive//Documentos//GitHub-Repos//phyton//py-ramos-gabriela//03-pandas//data//artwork_data.pickle"
+path_guardado = "D://Github-Gaby//py-ramos-gabriela//03-pandas//data//artwork_data.pickle"
 
 df = pd.read_pickle(path_guardado)
 

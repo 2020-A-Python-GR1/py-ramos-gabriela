@@ -16,7 +16,7 @@ Created on Sat Aug 15 17:05:16 2020
 import pandas as pd
 import os
     
-path = "C://Users//gabyl//OneDrive//Documentos//GitHub-Repos//phyton//py-ramos-gabriela//03-pandas//data//artwork_data.csv"
+path = "D://Github-Gaby//py-ramos-gabriela//03-pandas//data//artwork_data.csv"
 
 # "C:\Users\gabyl\OneDrive\Documentos\GitHub-Repos\phyton\py-ramos-gabriela\03-pandas\dataartwork_data.csv"
 
@@ -38,7 +38,7 @@ df3 = pd.read_csv(
     usecols = columnas,
     index_col = 'id')
 
-path_guardado = "C://Users//gabyl//OneDrive//Documentos//GitHub-Repos//phyton//py-ramos-gabriela//03-pandas//data//artwork_data.pickle"
+path_guardado = "D://Github-Gaby//py-ramos-gabriela//03-pandas//data//artwork_data.pickle"
 # artwork_data.pickle
 
 df3.to_pickle(path_guardado)
