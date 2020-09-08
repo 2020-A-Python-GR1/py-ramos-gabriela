@@ -1,0 +1,33 @@
+>>> response .xpath('/html/body/title').extract()
+[]
+>>> response .xpath('/html/head/title').extract()
+['<title>Quotes to Scrape</title>']
+>>> response .xpath('/html/head/title').extract()
+['<title>Quotes to Scrape</title>']
+>>> response .xpath('/html/head/title/text()').extract()
+
+BUSCAR TODAS LAS OCURREARNCIAS DE LA ETIQUETA ( QUE TENGA TITLE)
+
+>>> response .xpath('//title/text()').extract()
+['Quotes to Scrape']
+
+
+ACCEDER A CLASES QUE TENGAN UN NOMBRE (DIV[TAG] la clase se llamada tag)
+
+response .xpath("//div[@class='tag']/text()").extract()
+[]
+
+PERO SOLO HAY ANCORES
+
+>>> response .xpath("//a[@class='tag']/text()").extract()
+['change', 'deep-thoughts', 'thinking', 'world', 'abilities', 'choices', 'inspirational', 'life', 'live', 'miracle', 'miracles', 'aliteracy', 'books', 'classic', 'humor', 'be-yourself', 'inspirational', 'adulthood', 'success', 'value', 'life', 'love', 'edison', 'failure', 'inspirational', 'paraphrased', 'misattributed-eleanor-roosevelt', 'humor', 'obvious', 'simile', 'love', 'inspirational', 'life', 'humor', 'books', 'reading', 'friendship', 'friends', 'truth', 'simile']
+>>>
+
+
+LINKS PARA VISITAR AUTORES CON CSS
+response.css('div.quote span a::attr(href)').extract()
+
+
+CON XPATH
+response.xpath("//div[@class='quote']/span/a/@href").extract()
+
