@@ -1,3 +1,5 @@
+Scrapy start proyect nombreproyecto
+
 >>> response .xpath('/html/body/title').extract()
 []
 >>> response .xpath('/html/head/title').extract()
