@@ -11,7 +11,7 @@ import sqlite3
 import xlsxwriter
 
 
-path_guardado = "C://Users//gabyl//OneDrive//Documentos//GitHub-Repos//phyton//py-ramos-gabriela//03-pandas//data//artwork_data.pickle"
+path_guardado = "C:/GitHub-Gaby//py-ramos-gabriela//03-pandas//data//artwork_data.pickle"
 # artwork_data.pickle
 
 df = pd.read_pickle(path_guardado)
@@ -26,9 +26,9 @@ sub_df = df.iloc[49980:50519,:].copy()
 
 # Excel #
 
-path_excel = "C://Users//gabyl//OneDrive//Documentos//GitHub-Repos//phyton//py-ramos-gabriela//03-pandas//data//artwork_data.xlsx"
-path_excel_indice = "C://Users//gabyl//OneDrive//Documentos//GitHub-Repos//phyton//py-ramos-gabriela//03-pandas//data//artwork_data_indice.xlsx"
-path_excel_columnas = "C://Users//gabyl//OneDrive//Documentos//GitHub-Repos//phyton//py-ramos-gabriela//03-pandas//data//artwork_data_columnas.xlsx"
+path_excel = "C:/GitHub-Gaby//py-ramos-gabriela//03-pandas//data//artwork_data.xlsx"
+path_excel_indice = "C:/GitHub-Gaby//py-ramos-gabriela//03-pandas//data//artwork_data_indice.xlsx"
+path_excel_columnas = "C:/GitHub-Gaby//py-ramos-gabriela//03-pandas//data//artwork_data_columnas.xlsx"
 
 # Con el indice como columna
 #sub_df.to_excel(path_excel)
@@ -42,7 +42,7 @@ sub_df.to_excel(path_excel_columnas, columns = columnas)
 
 # Multiples hojas de trabajo #
 
-path_excel_mt = "C://Users//gabyl//OneDrive//Documentos//GitHub-Repos//phyton//py-ramos-gabriela//03-pandas//data//artwork_data_mt.xlsx"
+path_excel_mt = "C:/GitHub-Gaby//py-ramos-gabriela//03-pandas//data//artwork_data_mt.xlsx"
 # artwork_data_mt.xlsx
 
 writer = pd.ExcelWriter(path_excel_mt, 
@@ -58,7 +58,7 @@ writer.save()
 
 # Formato condicional #
 
-path_excel_colores = "C://Users//gabyl//OneDrive//Documentos//GitHub-Repos//phyton//py-ramos-gabriela//03-pandas//data//artwork_data_colores2.xlsx"
+path_excel_colores = "C:/GitHub-Gaby//py-ramos-gabriela//03-pandas//data//artwork_data_colores2.xlsx"
 
 # artwork_data_colores.xlsx
 

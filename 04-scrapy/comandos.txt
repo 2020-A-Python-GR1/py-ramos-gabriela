@@ -1,4 +1,6 @@
-Scrapy start proyect nombreproyecto
+scrapy startproject nombreproyecto
+scrapy crawl nombredelaAraniaconda install -c conda-forge scrapy
+
 
 >>> response .xpath('/html/body/title').extract()
 []
